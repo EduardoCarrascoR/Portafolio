@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --font: 'Oxygen', sans-serif;
+    --primary: #42E2B8;
+    --gradient: linear-gradient(0deg, rgba(93,131,171,0.9374124649859944) 4%, rgba(65,115,164,1) 53%, rgba(37,109,133,1) 99%);
+    --black: black;
+    --navi:rgb(0, 43, 91);
+    --nav:rgba(65,115,164,1);
+    --Lochmara: rgb(2 132 199);
+    --Cerulean: rgb(14, 165, 233);
+    --Malaquita: rgb(16, 185, 129);
+    --Teal: rgb(67, 154, 151);
+    --Mint: rgb(98, 182, 183);
+    --LightMint: rgb(151, 222, 206);
+    --LightGreen: rgb(203, 237, 213);
+    --white: white;
+
+}
+
+body {
+    box-sizing: border-box;
+    background: var(--white) ;
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
