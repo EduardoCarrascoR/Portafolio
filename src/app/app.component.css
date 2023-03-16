@@ -265,6 +265,16 @@ section.formcontato{
     padding-top: 2.5%;
 }
 
+.experience__content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.experience__img{
+    width: 55%;
+}
+
 /*footeer*/
 
 section.footer{
