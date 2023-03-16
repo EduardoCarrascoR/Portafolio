@@ -74,6 +74,7 @@ section.menu{
     height: 5%;
     width: 100%;
     transition: .25s height ease-in-out;
+    color: var(--white);
     background: transparent;
 }
 
@@ -102,7 +103,7 @@ section.menu{
     position: fixed;
     width: 100%;
     height: 4%;
-    background: var(--nav);
+    background: var(--DarkGreen);
     border-bottom: #0000001c 2px solid;
 }
 
@@ -127,8 +128,9 @@ section.menu{
 
 section.title{
     width: 100%;
-    padding-top: 3.5%;
+    padding: 3.5% 0 0;
     background:  var(--gradient);
+    color: var(--white);
 }
 
 .title__div{
@@ -141,7 +143,7 @@ section.title{
 
 .profile{
     height: 90%;
-    width: 90%;
+    width: 100%;
 }
 
 .profile__container{
@@ -156,7 +158,7 @@ img.img-profile{
     content: url("../assets/img/profile.jpg");
     max-height: 55%;
     max-width: 55%;
-    border: var(--black) solid;
+    border: var(--white) solid;
     border-radius: 50%;
     margin: 10px 0 10px 0;
 }
@@ -192,20 +194,20 @@ img.img-profile{
 .ico{
     width: auto;
     height: 40%;
-
+    filter: invert();
 }
 
 
 /*Sección About*/
 
 section.about{
-
+    padding-top: 2.5%;
 }
 
 /*Sección Skills*/
 
 section.skills{
-    padding: 15px;
+    padding-top: 2.5%;
 }
 
 .skills__title{
@@ -221,7 +223,7 @@ section.skills{
 /*Sección Hobbies*/
 
 section.hobbies{
-    padding: 15px;
+    padding-top: 2.5%;
 }
 
 .hobbies__title{
@@ -236,7 +238,9 @@ section.hobbies{
 /* Experiencia Académica*/
 
 section.academic{
-    padding: 15px;
+    padding-top: 2.5%;
+    background:  var(--DarkGreen);
+    color: var(--white);
 }
 
 .academic__title{
@@ -252,13 +256,13 @@ section.academic{
 /* experiencia*/
 
 section.experience{
-
+    padding-top: 2.5%;
 }
 
 /*Contacto*/
 
 section.formcontato{
-
+    padding-top: 2.5%;
 }
 
 /*footeer*/

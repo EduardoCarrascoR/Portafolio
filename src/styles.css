@@ -2,10 +2,10 @@
 :root {
     --font: 'Oxygen', sans-serif;
     --primary: #42E2B8;
-    --gradient: linear-gradient(0deg, rgba(93,131,171,0.9374124649859944) 4%, rgba(65,115,164,1) 53%, rgba(37,109,133,1) 99%);
+    --gradient: linear-gradient(0deg, rgba(67,165,108,1) 0%, rgba(58,138,93,1) 5%, rgba(54,124,86,1) 12%, rgba(50,112,80,1) 21%, rgba(47,106,76,1) 49%, rgba(44,97,70,1) 70%, rgba(37,82,59,1) 85%);
     --black: black;
     --navi:rgb(0, 43, 91);
-    --nav:rgba(65,115,164,1);
+    --nav:rgba(50,112,80,1);
     --Lochmara: rgb(2 132 199);
     --Cerulean: rgb(14, 165, 233);
     --Malaquita: rgb(16, 185, 129);
@@ -13,6 +13,7 @@
     --Mint: rgb(98, 182, 183);
     --LightMint: rgb(151, 222, 206);
     --LightGreen: rgb(203, 237, 213);
+    --DarkGreen: rgba(44,97,70,1);
     --white: white;
 
 }
