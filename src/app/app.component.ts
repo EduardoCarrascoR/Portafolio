@@ -10,6 +10,7 @@ import { MatMenuTrigger } from '@angular/material/menu';
 export class AppComponent {
   
   title = 'Portafolio';
+  rotation: any;
 
 
   isSticky: boolean = false;
@@ -17,6 +18,10 @@ export class AppComponent {
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.pageYOffset >= 0.5;
+  }
+
+  rotate(){
+    return 
   }
 
 }
