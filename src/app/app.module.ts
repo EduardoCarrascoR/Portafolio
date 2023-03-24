@@ -3,13 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './material/material.module';
 
-  import { MatMenuModule } from '@angular/material/menu';
-  import { MatButtonModule } from '@angular/material/button';
-  import { MatIconModule } from '@angular/material/icon';
-  import { MatToolbarModule } from '@angular/material/toolbar';
-  import { MatSidenavModule } from '@angular/material/sidenav';
-  import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 @NgModule({
   declarations: [
@@ -18,12 +14,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatProgressSpinnerModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

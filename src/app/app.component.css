@@ -27,6 +27,7 @@ ol, ul,li {
 a{
     text-decoration: none;
     color: var(--cor-de-link);
+    width: 100%;
 }
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -71,21 +72,25 @@ section.menu{
 .fixed-header {
     position: absolute;
     top: 0;
-    height: 5%;
-    width: 100%;
-    transition: .25s height ease-in-out;
+    height: 8.2%;
+    width: 5.8%;
+    margin: 0.5% 0 0 0.5%;
+    border-radius: 50%;
+    transition: 2s height ease-in-out, 2s width ease-in-out;
     color: var(--white);
-    background: transparent;
+    background: var(--Mint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-content{
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     height: 100%;
     width: 100%;
-
 }
 
 #frugalmap {
@@ -101,10 +106,10 @@ section.menu{
 
 .sticky {
     position: fixed;
-    width: 100%;
-    height: 4%;
-    background: var(--DarkGreen);
-    border-bottom: #0000001c 2px solid;
+    height: 7.8%;
+    width: 5.6%;
+    color: var(--white);
+    transition: 2s height ease-in-out, 2s width ease-in-out;
 }
 
 .img-header{
@@ -124,13 +129,17 @@ section.menu{
     color: var(--black);
 }
 
+.about_me__content{
+    height: 100%;
+    background: var(--DarkGreen);
+}
 /*Sección Title*/
 
 section.title{
     width: 100%;
-    padding: 3.5% 0 0;
-    background:  var(--gradient);
-    color: var(--white);
+    height: 100%;
+    color: var(--black);
+    background: var(--LightMint);
 }
 
 .title__div{
@@ -139,6 +148,19 @@ section.title{
     justify-content: space-evenly;
     height: 100%;
     align-items: center;
+}
+
+.title__content-border{
+    background: var(--DarkGreen);
+}
+
+.title__content{
+    width: 100%;
+    height: 50%;
+    padding: 4.5% 0 0;
+    background: var(--LightMint);
+    border-top-right-radius: 35% 40%;
+    border-bottom-left-radius: 35% 40%;
 }
 
 .profile{
@@ -158,18 +180,10 @@ img.img-profile{
     content: url("../assets/img/profile.jpg");
     max-height: 55%;
     max-width: 55%;
-    border: var(--white) solid;
-    border-radius: 50%;
-    margin: 10px 0 10px 0;
-}
-
-/* .img-profile{
-    max-height: 65%;
-    max-width: 65%;
     border: var(--black) solid;
     border-radius: 50%;
     margin: 10px 0 10px 0;
-} */
+}
 
 .title__container{
     width: 50%;
@@ -180,20 +194,30 @@ img.img-profile{
 }
 
 .social__container{
-    height: 35%;
-    width: 60%;
+    width: 50%;
+    height: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .social-item{
-    width: 14%;
+    width: 100%;
+    transition: 1s;
+    filter: invert();
+}
+
+a.a_content{
+    width: 15%
+}
+
+div.social-item:hover{
+    transform: rotate(5deg) scale(1.1);
+    transition: 1s;
 }
 
 .ico{
-    width: auto;
-    height: 40%;
+    width: 100%;
     filter: invert();
 }
 
@@ -202,6 +226,9 @@ img.img-profile{
 
 section.about{
     padding-top: 2.5%;
+    background: var(--DarkGreen);
+    color: var(--white);
+    border-top-right-radius: 35% 40%;
 }
 
 /*Sección Skills*/

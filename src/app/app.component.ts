@@ -1,7 +1,6 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +10,7 @@ export class AppComponent {
   
   title = 'Portafolio';
   rotation: any;
+  menu: any;
 
 
   isSticky: boolean = false;
@@ -23,5 +23,11 @@ export class AppComponent {
   rotate(){
     return 
   }
+/* 
+  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
+
+  someMethod() {
+    this.trigger.openMenu();
+  } */
 
 }
