@@ -3,29 +3,41 @@
   <!-- Sección del Header -->
   <header>
     <div class="u-wrapper">
-      <mat-card class="fixed-header" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
-        <mat-card-actions>
-          <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon aria-label="Example home icon" fontIcon="home"></mat-icon></button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item >Vertebrates</button>
-          </mat-menu>
+      <mat-card class="fixed-header" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky, 'menu_active': menuActive}">
+        <mat-card-actions class="card_action_content">
+          <button mat-icon-button class="icom_menu_container"  *ngIf="element == false" (click)="showData()">
+            <mat-icon class="icom_menu" >menu</mat-icon>
+          </button>
+          <button mat-icon-button class="icom_menu_container" [ngClass]="{'icom_menu_container-active':menuActive}" *ngIf="element == true" (click)="hideData()">
+
+            <mat-icon class="icom_menu" >close</mat-icon>
+          </button>
+          <div class="menu__list-unactive" [ngClass]="{'menu__list-active':menuActive, 'menu__list-unactive': menuUnactive}">
+
+            <div class="list">
+              <li><a href="#skills"><h2>Skills</h2></a></li>
+              <li><a href="#hobbies"><h2>Hobbies</h2></a></li>
+              <li><a href="#formacion"><h2>Formations</h2></a></li>
+              <li><a href="#xp"><h2>Experience</h2></a></li>
+            </div>
+          </div>
         </mat-card-actions>
       </mat-card>
     </div>
   </header>
 </section>
 
-<div class="tudo">
+
+<div class="all_page">
   
   <!-- Sección del Title/Hero -->
   <div class="about_me__content">
-    <section class="title ">
-      <div class="title__content-border">
+    <div class="title ">
+      <section class="title__content-border">
         <div class="title__content">
-          <div class="title__div tudo_content">
+          <div class="title__div all_page_content">
             <div class="profile__container">
-              <!-- <img class="img-profile" src="assets/img/profile.jpg"> -->
-              <img class="img-profile">
+              <img class="img-profile" src="assets/img/profile.jpg">
               <div class="social__container">
                 <a href="https://www.instagram.com/edward_thorleif/" target="_blank" class="a_content">
                   <div class="social-item"> 
@@ -59,23 +71,21 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Sección sobre mi -->
       <section class="about" id="sobre-mi">
-        <div class="about__container tudo_content">
+        <div class="about__container all_page_content">
           <h3 class="about__title">Sobre mi</h3>
           <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.  </p>
           <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
-          <!-- Si quieres, pon tú firma acá! -->
-          <img src="assets/img/signature.png">
         </div>
       </section>
-    </section>
+    </div>
   </div>
   
-  <!-- Sección de Skills -->
-  <section class="skills" id="skills">
-    <div class="tudo_content">
+ <!--  Sección de Skills -->
+  <section class="skills " id="skills">
+    <div class="all_page_content">
       <h3 class="skills__title">Skills</h3>
       <div class="skills__line ">
         <div class="skills__box">
@@ -111,7 +121,7 @@
 
   <!-- Sección de Hobbies -->
   <section class="hobbies" id="hobbies">
-    <div class="tudo_content">
+    <div class="all_page_content">
       <h3 class="hobbies__title">Hobbies</h3>
       <div class="hobbies__line">
         <div class="hobbies__box">
@@ -152,9 +162,9 @@
     </div>
   </section>
 
-      <!-- Sección de Formación académica -->
+  <!--     Sección de Formación académica -->
   <section class="academic" id="formacion">
-    <div class="tudo_content">
+    <div class="all_page_content">
       <h2 class="academic__title" >Formación académica</h2>
       <div class="academic__courses">
         <div class="academic__courses__box">
@@ -167,7 +177,7 @@
         </div>
         <div class="academic__courses__box">
           <ul class="academic__courses__list">
-            <!--Pon el logotipo de la institución de formación -->
+            <!-- Pon el logotipo de la institución de formación -->
             <li class="academic__courses__item__img"><img src="assets/img/alura_logo.png"></li>
             <li class="academic__courses__item__title"><h4>Formación en UX Design</h4></li>
             <li class="academic__courses__item__subtitle"><p>2019 - Alura</p></li>
@@ -185,9 +195,9 @@
     </div>
   </section>
 
-  <!-- Sección de Experiencia Profesional/Proyectos-->
+  <!-- Sección de Experiencia Profesional/Proyectos -->
   <section class="experience" id="xp">
-    <div class="tudo_content">
+    <div class="all_page_content">
       <h2 class="experience__section__title" >Experiencia Profesional</h2>
       <div class="experience__content">
         <div class="experience__box">
@@ -200,11 +210,11 @@
   
             <h2 class="experience__title">Encriptador de texto</h2>
             <h3 class="experience__text">Challenge Alura Codificador </h3>
-              <!-- <div class="experience__description">
+              <div class="experience__description">
                 Pon el enlace del proyecto en Github o GithubPages
                 <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-encriptador-latam"><button class="experiencia__botao--repo">Repositório</button></a></span>
                 <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
-              </div> -->
+              </div>
           </div>
         </div>  
   
@@ -216,11 +226,11 @@
           <div class="experience__info-container">
             <h2 class="experience__title">HTML y JavaScript</h2>
             <h3 class="experience__text">Challenge Oracle </h3>
-              <!-- <div class="experience__description">
+              <div class="experience__description">
                 Pon el enlace del proyecto en Github o GithubPages
                 <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-juego-ahorcado"><button class="experiencia__botao--repo">Repositório</button></a></span>
                 <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
-              </div> -->
+              </div>
           </div>
         </div>  
   
@@ -232,11 +242,11 @@
             <div class="experience__info-container">
               <h2 class="experience__title">Encriptador de texto</h2>
               <h3 class="experience__text">Challenge Oracle </h3>
-                <!-- <div class="experience__description">
+                <div class="experience__description">
                         Pon el enlace del proyecto en Github o GithubPages
                         <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-encriptador-latam"><button class="experiencia__botao--repo">Repositório</button></a></span>
                         <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
-                </div> -->
+                </div>
             </div>
         </div>  
   
@@ -247,11 +257,6 @@
           <div class="experience__info-container">
             <h2 class="experience__title">JHTML, CSS y JavaScript</h2>
             <h3 class="experience__text">Challenge Oracle </h3>
-            <!-- <div class="experience__description">
-              Pon el enlace del proyecto en Github o GithubPages
-              <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-juego-ahorcado"><button class="experiencia__botao--repo">Repositório</button></a></span>
-              <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
-            </div> -->
           </div>
         </div>
       </div>
@@ -259,31 +264,28 @@
       
   </section>
 
-    <!-- Sección de Contacto -->
-  <section class="formcontato" id="contacto">
-    <div class="tudo_content">
+  <!--   Sección de Contacto -->
+  <section class="formcontato " id="contacto">
+    <div class="all_page_content contacto_container">
       <div  class="formcontato__contacto">
-        <div class="formcontato--esquerda">
-          <img class="formcontato__img" src="assets\contact_image.png">
-        </div>
         <div class="formcontato__text">
           <h2 class="formcontato__title">Contacto</h2>
           <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
           <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
-          <form class="formcontato__form" name="form">
-            <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
-            <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
-            <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto">
-            <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
-            <button type="submit" class="formcontato__botao">Enviar mensaje</button>
-          </form>
         </div>
+        <form class="formcontato__form" name="form">
+          <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
+          <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
+          <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto">
+          <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
+          <button type="submit" class="formcontato__botao">Enviar mensaje</button>
+        </form>
       </div>
     </div>
   </section>
 
     <!-- Sección de Footer -->
-  <section class="footer tudo_content">
+  <section class="footer all_page_content">
     <div class="footer__rodape">
       <p>Desarrollado por Fulana de Tal</p>
       <p>2022</p>

@@ -1,5 +1,7 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { BooleanInput } from '@angular/cdk/coercion';
+import { Component, HostListener, Input, ViewChild, ViewContainerRef } from '@angular/core';
+import { MatMenu, MatMenuTrigger, MenuPositionX } from '@angular/material/menu';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +12,12 @@ export class AppComponent {
   
   title = 'Portafolio';
   rotation: any;
-  menu: any;
+  element: boolean = false;
 
 
   isSticky: boolean = false;
+  menuActive:  boolean = false;
+  menuUnactive:  boolean = true;
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
@@ -23,11 +27,22 @@ export class AppComponent {
   rotate(){
     return 
   }
-/* 
-  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
-  someMethod() {
-    this.trigger.openMenu();
-  } */
+  @Input() data: string[] = [];
+  @Input() trigger = "Trigger";
+  @Input() isRootNode = false;
+  
 
+  showData() {
+    console.log("alli esta")
+    this.menuActive = true;
+    this.menuUnactive = false;
+    return (this.element = true);
+  }
+  
+  hideData() {
+    this.menuActive = false;
+    this.menuUnactive = true;
+    return (this.element = false);
+  }
 }
