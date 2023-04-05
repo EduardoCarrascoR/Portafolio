@@ -8,7 +8,7 @@
           <button mat-icon-button class="icom_menu_container"  *ngIf="element == false" (click)="showData()">
             <mat-icon class="icom_menu" >menu</mat-icon>
           </button>
-          <button mat-icon-button class="icom_menu_container" [ngClass]="{'icom_menu_container-active':menuActive}" *ngIf="element == true" (click)="hideData()">
+          <button mat-icon-button [ngClass]="{'icom_menu_container-active':menuActive}" *ngIf="element == true" (click)="hideData()">
 
             <mat-icon class="icom_menu" >close</mat-icon>
           </button>
@@ -41,22 +41,22 @@
               <div class="social__container">
                 <a href="https://www.instagram.com/edward_thorleif/" target="_blank" class="a_content">
                   <div class="social-item"> 
-                    <img class="ico" src="assets/icon/instagram.png" alt="Instagram">
+                    <img class="social_icon" src="assets/icon/instagram.png" alt="Instagram">
                   </div>
                 </a>
                 <a href="https://www.linkedin.com/in/eduardo-ignacio-carrasco-romero/" target="_blank" class="a_content">
                   <div class="social-item">
-                    <img src="assets/icon/linkedin.png" alt="Linkedin" class="ico">
+                    <img src="assets/icon/linkedin.png" alt="Linkedin" class="social_icon">
                   </div>
                 </a>
                 <a href="https://api.whatsapp.com/send/?phone=56977636569" target="_blank" class="a_content">
                   <div class="social-item">
-                    <img class="ico" src="assets/icon/whatsapp.png" alt="Whatsapp">
+                    <img class="social_icon" src="assets/icon/whatsapp.png" alt="Whatsapp">
                   </div>
                 </a>
                 <a href="https://drive.google.com/file/d/1Hr7HvTzfaLYkdqU5CaOhhBeqzcI_lQiI/view?usp=share_link" target="_blank" class="a_content">
                   <div class="social-item">
-                    <img class="ico" src="assets/icon/cv2.png" alt="CV">
+                    <img class="social_icon" src="assets/icon/cv2.png" alt="CV">
                   </div>
                 </a>    
               </div>
@@ -84,81 +84,32 @@
   </div>
   
  <!--  Sección de Skills -->
-  <section class="skills " id="skills">
-    <div class="all_page_content">
-      <h3 class="skills__title">Skills</h3>
-      <div class="skills__line ">
-        <div class="skills__box">
-          <ul>
-            <li class="skills__img"><img class="icons" src="assets/icon/htlm.png"></li>
-            <li class="skills__name"> HTML 5</li>
-          </ul>
-        </div>
-  
-        <div class="skills__box">
-          <ul>
-            <li class="skills__img"> <img class="icons" src="assets/icon/js_icon.png" alt=""></li>
-            <li class="skills__name">Javascript</li>
-          </ul>
-        </div>
-  
-        <div class="skills__box">
-          <ul>
-            <li class="skills__img"><img class="icons" src="assets/icon/nodejs_icon.png" alt=""></li>
-            <li class="skills__name">Node JS</li>
-          </ul>
-        </div>
-  
-        <div class="skills__box">
-          <ul>
-            <li class="skills__img"> <img class="icons" src="assets/icon/css_icon.png" alt=""> </li>
-            <li class="skills__name">CSS</li>
-          </ul>
-        </div>
-      </div>
+  <section class="skills" id="skills">
+    <div class="all_page_content carrousel__container">
+      <h3 class="carrousel__title">Skills</h3>
+      <owl-carousel-o class="carrousel__content" [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let skill of skills">
+          <div class="icon__container">
+            <img class="icon" src="{{skill.src}}" alt="{{skill.name}}">
+            <li class="icon-text">{{skill.name}}</li>
+          </div>
+        </ng-template>  
+      </owl-carousel-o>
     </div>
   </section>
 
   <!-- Sección de Hobbies -->
   <section class="hobbies" id="hobbies">
-    <div class="all_page_content">
-      <h3 class="hobbies__title">Hobbies</h3>
-      <div class="hobbies__line">
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img"> <img class="icons" src="assets/icon/guitar_icon.png" alt=""></li>
-            <li class="hobbies__name">Tocar bajo</li>
-          </ul>
-        </div>
-  
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img"> <img src="assets/icon/headphones_icon.png" alt=""></li>
-            <li class="hobbies__name">Oir música</li>
-          </ul>
-        </div>
-  
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img"><img class="icons" src="assets/icon/tv_icon.png" alt=""></li>
-            <li class="hobbies__name">Ver séries</li>
-          </ul>
-        </div>
-  
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img"> <img class="icons" src="assets/icon/forkspoon_icon.png" alt=""> </li>
-            <li class="hobbies__name">Cocinar</li>
-          </ul>
-        </div>
-  
-        <div class="hobbies__box">
-          <ul>
-            <li class="hobbies__img"> <img class="icons" src="assets/icon/camera_icon.png" alt=""> </li>
-            <li class="hobbies__name">Tomar fotos</li>
-          </ul>
-        </div>
-      </div>
+    <div class="all_page_content carrousel__container">
+      <h3 class="carrousel__title">Hobbies</h3>
+      <owl-carousel-o class="carrousel__content" [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let hobbie of hobbies">
+          <div class="icon__container">
+            <img class="icon" src="{{hobbie.src}}" alt="{{hobbie.name}}">
+            <li class="icon-text">{{hobbie.name}}</li>
+          </div>
+        </ng-template>  
+      </owl-carousel-o>
     </div>
   </section>
 
@@ -291,4 +242,15 @@
       <p>2022</p>
     </div>
   </section>
+
+  <!-- <div class="wrapper">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of slidesStore" class="content">
+        <ng-template class="slide" carouselSlide [id]="slide.id">
+          <img class="icons" [src]="slide.src" [alt]="slide.name" [title]="slide.name" />
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div> -->  
 </div>
+

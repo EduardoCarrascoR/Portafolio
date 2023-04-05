@@ -3,7 +3,7 @@
 en las secciones señaladas */
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css');
 .btn {
     font-family: var(--font);
     border-radius: 90px;
@@ -136,8 +136,11 @@ section.menu{
 }
 
 .icom_menu_container-active{
-    height: 20%;
+    height: 16%;
     width: 20%;
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
 }
 
 .icom_menu{
@@ -328,7 +331,7 @@ div.social-item:hover{
     transition: 1s;
 }
 
-.ico{
+.social_icon{
     width: 100%;
     filter: invert();
 }
@@ -366,32 +369,62 @@ section.skills{
     padding-top: 2.5%;
 }
 
-.skills__title{
-    text-align: center;
-}
-
-.skills__line{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
 
 /*Sección Hobbies*/
-
 section.hobbies{
     height: 5%;
     padding-top: 2.5%;
 }
 
-.hobbies__title{
-    text-align: center;
+.carrousel__container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.hobbies__line{
+.carrousel__title{
+    text-align: center;
+    height: 15%;
+}
+
+.hobbies__container{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.hobbies div.icon__container{
+    transition: all .3s ease;
+}
+
+.hobbies div.icon__container:hover{
+    box-shadow:  0 0 10px 1px #dbdbdb
+}
+.carrousel__content{
+    height: 80%;
+}
+.icon__container{
+    width: 50% !important;
+    height: 90% !important;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    width: auto !important;
+    height: 30px !important;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    max-width: 20vh;
+}
+
+.icon-text{
+    font-size: 10px;
+}
+
 /* Experiencia Académica*/
 
 section.academic{

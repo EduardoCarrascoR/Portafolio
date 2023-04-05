@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -18,7 +19,8 @@ const MaterialComponents = [
   MatSidenavModule,
   MatProgressSpinnerModule,
   MatCardModule,
-  MatSlideToggleModule 
+  MatSlideToggleModule,
+  CarouselModule
 ];
 
 @NgModule({
