@@ -1,5 +1,8 @@
 import { Component, HostListener, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { OwlOptions } from "ngx-owl-carousel-o";
+import { ProyectModalComponent } from './components/proyect-modal/proyect-modal.component';
+import { Proyect } from './interfaces/proyect';
 
 @Component({
   selector: 'app-root',
@@ -44,30 +47,26 @@ export class AppComponent implements OnInit{
       'src': 'assets/icon/NestJs.svg'
     },
   ];
-  hobbies = [{
+  hobbies = [
+    {
       'id': '0',
-      'name': 'Tocar bajo',
-      'src': 'assets/icon/guitar_icon.png'
+      'name': 'Series',
+      'src': 'tv_gen'
     },
     {
       'id': '1',
-      'name': 'Oir música',
-      'src': 'assets/icon/headphones_icon.png'
+      'name': 'Juegos',
+      'src': 'sports_esports'
     },
     {
       'id': '2',
-      'name': 'Ver séries',
-      'src': 'assets/icon/tv_icon.png'
+      'name': 'Dibujar',
+      'src': 'edit'
     },
     {
-      'id': '3',
-      'name': 'Cocinar',
-      'src': 'assets/icon/forkspoon_icon.png'
-    },
-    {
-      'id': '4',
-      'name': 'Tomar fotos',
-      'src': 'assets/icon/camera_icon.png'
+      'id': '2',
+      'name': 'Dibujar',
+      'src': 'edit'
     },
   ];
   title = 'Portafolio';
@@ -86,7 +85,7 @@ export class AppComponent implements OnInit{
   @Input() trigger = "Trigger";
   @Input() isRootNode = false;
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
       
@@ -116,7 +115,23 @@ export class AppComponent implements OnInit{
     },
     nav: true
   }
+  
+  proyects: Proyect[] = [
+    { name: "fibonachi",
+      img: "../assets/icon/WebApp.png",
+      languages: "Javascript"},
+    { name: "Encriptador de texto",
+      img: "../assets/icon/WebApp3.png",
+      languages: "HTML, CSS3 y JavaScript"},
+    { name: "Encriptador de texto",
+      img: "../assets/icon/WebApp4.png",
+      languages: "HTML, CSS3 y JavaScript"},
+    { name: "Desafio Alura",
+      img: "../assets/icon/WebApp2.png",
+      languages: "HTML y JavaScript"}
+  ];
 
+  
   rotate(){
     return 
   }
@@ -133,5 +148,13 @@ export class AppComponent implements OnInit{
     this.menuActive = false;
     this.menuUnactive = true;
     return (this.element = false);
+  }
+
+  openProyectModal(data: any): void{
+    const dialogRef = this.dialog.open(ProyectModalComponent, {
+      data,
+      width: '60%',
+      height: '50%'
+    });
   }
 }

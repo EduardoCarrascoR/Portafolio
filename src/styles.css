@@ -57,7 +57,7 @@ section div.owl-next, section div.owl-prev {
     width: 26px;
     border-radius: 50%!important;
     position: absolute;
-    top: 32%;
+    top: 18%;
 }
 
 section .owl-next{
@@ -70,7 +70,7 @@ section .owl-prev{
     transform: translate(-50%,-50%);
 }
 
-section .owl-next span, .hobbies .owl-prev span{
+section .owl-next span, section .owl-prev span{
     font-size: 24px;
     position: absolute;
     top: 50%;
@@ -87,4 +87,17 @@ section .owl-prev span{
 
 .mat-typography h3{
     margin: 0 0 10px;
+}
+
+.button_containers{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mat-mdc-raised-button.mat-unthemed.mat-mdc-raised-button:not(:disabled){
+    color: var(--white);
+    background-color: var(--DarkGreen) !important;
 }

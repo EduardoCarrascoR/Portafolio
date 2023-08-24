@@ -40,22 +40,22 @@
               <img class="img-profile" src="assets/img/profile.jpg">
               <div class="social__container">
                 <a href="https://www.instagram.com/edward_thorleif/" target="_blank" class="a_content">
-                  <div class="social-item"> 
+                  <div class="social-item instagram-icon"> 
                     <img class="social_icon" src="assets/icon/instagram.png" alt="Instagram">
                   </div>
                 </a>
                 <a href="https://www.linkedin.com/in/eduardo-ignacio-carrasco-romero/" target="_blank" class="a_content">
-                  <div class="social-item">
+                  <div class="social-item linkedin-icon">
                     <img src="assets/icon/linkedin.png" alt="Linkedin" class="social_icon">
                   </div>
                 </a>
                 <a href="https://api.whatsapp.com/send/?phone=56977636569" target="_blank" class="a_content">
-                  <div class="social-item">
+                  <div class="social-item whatsapp-icon">
                     <img class="social_icon" src="assets/icon/whatsapp.png" alt="Whatsapp">
                   </div>
                 </a>
                 <a href="https://drive.google.com/file/d/1Hr7HvTzfaLYkdqU5CaOhhBeqzcI_lQiI/view?usp=share_link" target="_blank" class="a_content">
-                  <div class="social-item">
+                  <div class="social-item CV-icon">
                     <img class="social_icon" src="assets/icon/cv2.png" alt="CV">
                   </div>
                 </a>    
@@ -104,8 +104,9 @@
       <h3 class="carrousel__title">Hobbies</h3>
       <owl-carousel-o class="carrousel__content" [options]="customOptions">
         <ng-template carouselSlide *ngFor="let hobbie of hobbies">
-          <div class="icon__container">
-            <img class="icon" src="{{hobbie.src}}" alt="{{hobbie.name}}">
+          <div class="icon__container" >
+            <!-- <img class="icon" src="{{hobbie.src}}" alt="{{hobbie.name}}"> -->
+            <mat-icon class="icon" aria-hidden="false" fontIcon="{{hobbie.src}}"></mat-icon>
             <li class="icon-text">{{hobbie.name}}</li>
           </div>
         </ng-template>  
@@ -149,67 +150,16 @@
   <!-- Sección de Experiencia Profesional/Proyectos -->
   <section class="experience" id="xp">
     <div class="all_page_content">
-      <h2 class="experience__section__title" >Experiencia Profesional</h2>
-      <div class="experience__content">
-        <div class="experience__box">
+      <h2 class="experience__section__title">Experiencia</h2>
+      <div class="experience__content" >
+        <div class="experience__box"*ngFor="let proyect of proyects">
           <div class="img__container">
-            <img class="experience__img img__rotate" src="../assets/icon/WebApp.png">
-
-          </div>
-          <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
-          <div class="experience__info-container">
-  
-            <h2 class="experience__title">Encriptador de texto</h2>
-            <h3 class="experience__text">Challenge Alura Codificador </h3>
-              <div class="experience__description">
-                Pon el enlace del proyecto en Github o GithubPages
-                <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-encriptador-latam"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
-              </div>
-          </div>
-        </div>  
-  
-        <div class="experience__box">
-          <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
-          <div class="img__container">
-            <img class="experience__img img__rotate" src="../assets/icon/WebApp2.png">
+            <img class="experience__img img__rotate" src={{proyect.img}} (click)="openProyectModal(proyect)">
           </div>
           <div class="experience__info-container">
-            <h2 class="experience__title">HTML y JavaScript</h2>
-            <h3 class="experience__text">Challenge Oracle </h3>
-              <div class="experience__description">
-                Pon el enlace del proyecto en Github o GithubPages
-                <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-juego-ahorcado"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
-              </div>
+            <h2 class="experience__title">{{proyect.name}}</h2>
           </div>
         </div>  
-  
-        <div class="experience__box">
-            <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
-            <div class="img__container">
-              <img class="experience__img img__rotate" src="../assets/icon/WebApp3.png">
-            </div>
-            <div class="experience__info-container">
-              <h2 class="experience__title">Encriptador de texto</h2>
-              <h3 class="experience__text">Challenge Oracle </h3>
-                <div class="experience__description">
-                        Pon el enlace del proyecto en Github o GithubPages
-                        <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-encriptador-latam"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                        <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
-                </div>
-            </div>
-        </div>  
-  
-        <div class="experience__box">
-          <div class="img__container">
-            <img class="experience__img img__rotate" src="../assets/icon/WebApp4.png">
-          </div>
-          <div class="experience__info-container">
-            <h2 class="experience__title">JHTML, CSS y JavaScript</h2>
-            <h3 class="experience__text">Challenge Oracle </h3>
-          </div>
-        </div>
       </div>
     </div>
       
@@ -236,10 +186,13 @@
   </section>
 
     <!-- Sección de Footer -->
-  <section class="footer all_page_content">
-    <div class="footer__rodape">
-      <p>Desarrollado por Fulana de Tal</p>
-      <p>2022</p>
+  <section class="footer ">
+    <div class="all_page_content">
+
+      <div class="footer__rodape">
+        <p>Desarrollado por Eduardo Carrasco Romero</p>
+        <p>2023</p>
+      </div>
     </div>
   </section>
 

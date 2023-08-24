@@ -63,7 +63,7 @@ https://en.bem.info/methodology/quick-start/*/
 
 .all_page{    
     width: 100%;
-    height: 2200px;
+    height: 2500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -254,7 +254,7 @@ div.card-menu{
 
 /*Sección Title*/
 .about_me__content{
-    height: 35%;
+    height: 25%;
     background: var(--DarkGreen);
 }
 
@@ -269,13 +269,13 @@ div.title{
 }
 
 
-.title__content-border{
-    height: 75%;
+section.title__content-border{
+    height: 70%;
     background: var(--DarkGreen);
 }
 .title__content{
     width: 100%;
-    height: 90%;
+    height: 87%;
     padding: 2.5% 0 0;
     background: var(--LightMint);
     border-top-right-radius: 35% 40%;
@@ -327,13 +327,30 @@ a.a_content{
 }
 
 div.social-item:hover{
-    transform: rotate(5deg) scale(1.1);
-    transition: 1s;
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 .social_icon{
     width: 100%;
     filter: invert();
+}
+
+.instagram-icon:hover{
+    width: 100%;
+    filter: invert(83%) sepia(80%) saturate(2184%) hue-rotate(245deg) brightness(300%) contrast(50%);
+}
+.linkedin-icon:hover{
+    width: 100%;
+    filter: invert(27%) sepia(89%) saturate(2516%) hue-rotate(135deg) brightness(50%) contrast(87%);
+}
+.whatsapp-icon:hover{
+    width: 100%;
+    filter: invert(62%) sepia(20%) saturate(790%) hue-rotate(79deg) brightness(96%) contrast(85%);
+}
+.CV-icon:hover{
+    width: 100%;
+    filter: invert(48%) sepia(95%) saturate(3306%) hue-rotate(355deg) brightness(99%) contrast(90%);
 }
 
 .title__container{
@@ -355,7 +372,7 @@ div.social-item:hover{
 /*Sección About*/
 
 section.about{
-    height: 25%;
+    height: 30%;
     padding-top: 2.5%;
     background: var(--DarkGreen);
     color: var(--white);
@@ -365,14 +382,14 @@ section.about{
 /*Sección Skills*/
 
 section.skills{
-    height: 5%;
+    height: 7%;
     padding-top: 2.5%;
 }
 
 
 /*Sección Hobbies*/
 section.hobbies{
-    height: 5%;
+    height: 7%;
     padding-top: 2.5%;
 }
 
@@ -394,11 +411,11 @@ section.hobbies{
     justify-content: space-evenly;
 }
 
-.hobbies div.icon__container{
+section div.icon__container{
     transition: all .3s ease;
 }
 
-.hobbies div.icon__container:hover{
+section div.icon__container:hover{
     box-shadow:  0 0 10px 1px #dbdbdb
 }
 .carrousel__content{
@@ -414,11 +431,11 @@ section.hobbies{
     align-items: center;
 }
 .icon{
-    width: auto !important;
     height: 30px !important;
     aspect-ratio: 3/2;
     object-fit: contain;
     max-width: 20vh;
+    text-align-last: center;
 }
 
 .icon-text{
@@ -428,7 +445,7 @@ section.hobbies{
 /* Experiencia Académica*/
 
 section.academic{
-    height: 10%;
+    height: 15%;
     padding-top: 2.5%;
     background:  var(--DarkGreen);
     color: var(--white);
@@ -447,43 +464,52 @@ section.academic{
 /* experiencia*/
 
 section.experience{
-    height: 30%;
+    height: 29%;
     padding-top: 2.5%;
     width: 100%;
 }
 .experience__box{
     width: 30%;
+    height: 40%;
     padding: 1.5% 1.5% 1.5% 1.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .img__container{
     display: flex;
     justify-content: center;
     height: 60%;
-    width: 100%;    
-
+    width: 90%;    
+    
 }
 
 .experience__img{
-    width: 60%;
+    cursor: pointer;
+    width: 40%;
     height: 100%;
     transition: 2s ;
 }
 
 img.img__rotate:hover{
     display: block;
-    transform: rotate(5deg) scale(1.2);
-    transition: 2s ;
+    transform: scale(1.2);
+    transition: all 0.3s linear;
 }
 
 .experience__info-container{
     height: 40%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }   
+
 /*Contacto*/
 
 section.formcontato{
-    height: 10%;
+    height: 15%;
     padding-top: 2.5%;
 }
 
@@ -504,8 +530,12 @@ section.formcontato{
 /*footeer*/
 
 section.footer{
-    height: 5%;
+    height: 3%;
+    background:  var(--DarkGreen);
+}
 
+.footer__rodape p{
+    color: var(--white);
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?

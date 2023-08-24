@@ -10,10 +10,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MatDialogModule } from "@angular/material/dialog";
 
 const MaterialComponents = [
   MatButtonModule,
   MatMenuModule,
+  MatDialogModule,
   MatIconModule,
   MatToolbarModule,
   MatSidenavModule,

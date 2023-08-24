@@ -1,0 +1,27 @@
+<div class="modal-content">
+    <div class="text-content">
+        <h1 mat-dialog-title>{{data.name}}</h1>
+    
+        <div mat-dialog-content>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
+            <p>Lenguajes utilizados: {{data.languages}}</p>
+        </div>
+        
+    </div>
+    <div class="carrusel">
+        <owl-carousel-o class="carrousel__content" [options]="ProyectOptions">
+          <ng-template carouselSlide *ngFor="let image of images">
+            <div class="icon__container" >
+              <img src="{{image.src}}" alt="{{image.name}}">
+              <!-- <mat-icon class="icon" aria-hidden="false" fontIcon="{{image.src}}"></mat-icon> -->
+            </div>
+          </ng-template>  
+        </owl-carousel-o>
+      </div>
+      <div class="modal-button" mat-dialog-actions>
+        <button class="view-button" mat-raised-button>Repository</button>
+    </div>
+    
+</div>
