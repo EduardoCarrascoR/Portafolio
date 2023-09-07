@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { OwlOptions } from "ngx-owl-carousel-o";
 import { ProyectModalComponent } from './components/proyect-modal/proyect-modal.component';
@@ -69,13 +69,29 @@ export class AppComponent implements OnInit{
       'src': 'edit'
     },
   ];
+  proyects: Proyect[] = [
+    { name: "fibonachi",
+      img: "../assets/icon/WebApp.png",
+      languages: "Javascript"},
+    { name: "Encriptador de texto",
+      img: "../assets/icon/WebApp3.png",
+      languages: "HTML, CSS3 y JavaScript"},
+    { name: "Encriptador de texto",
+      img: "../assets/icon/WebApp4.png",
+      languages: "HTML, CSS3 y JavaScript"},
+    { name: "Desafio Alura",
+      img: "../assets/icon/WebApp2.png",
+      languages: "HTML y JavaScript"}
+  ];
   title = 'Portafolio';
   rotation: any;
   element: boolean = false;
-
   isSticky: boolean = false;
-  menuActive:  boolean = false;
+  menuActive:  boolean = true;
+  burgerActive:  boolean = false;
   menuUnactive:  boolean = true;
+
+  isMenuOpen: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
@@ -116,45 +132,19 @@ export class AppComponent implements OnInit{
     nav: true
   }
   
-  proyects: Proyect[] = [
-    { name: "fibonachi",
-      img: "../assets/icon/WebApp.png",
-      languages: "Javascript"},
-    { name: "Encriptador de texto",
-      img: "../assets/icon/WebApp3.png",
-      languages: "HTML, CSS3 y JavaScript"},
-    { name: "Encriptador de texto",
-      img: "../assets/icon/WebApp4.png",
-      languages: "HTML, CSS3 y JavaScript"},
-    { name: "Desafio Alura",
-      img: "../assets/icon/WebApp2.png",
-      languages: "HTML y JavaScript"}
-  ];
-
-  
-  rotate(){
-    return 
-  }
-
-
-  showData() {
-    console.log("alli esta")
-    this.menuActive = true;
-    this.menuUnactive = false;
-    return (this.element = true);
-  }
-  
-  hideData() {
-    this.menuActive = false;
-    this.menuUnactive = true;
-    return (this.element = false);
-  }
-
   openProyectModal(data: any): void{
     const dialogRef = this.dialog.open(ProyectModalComponent, {
       data,
       width: '60%',
       height: '50%'
     });
+  }
+
+  onSidenavClick(): void {
+    this.isMenuOpen = false;
+    this.menuActive = !this.menuActive;
+    this.burgerActive = !this.burgerActive;
+    this.menuUnactive = !this.menuUnactive;
+
   }
 }

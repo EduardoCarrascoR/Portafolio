@@ -2,26 +2,24 @@
 <section class="menu">
   <!-- Sección del Header -->
   <header>
-    <div class="u-wrapper">
-      <mat-card class="fixed-header" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky, 'menu_active': menuActive}">
-        <mat-card-actions class="card_action_content">
-          <button mat-icon-button class="icom_menu_container"  *ngIf="element == false" (click)="showData()">
-            <mat-icon class="icom_menu" >menu</mat-icon>
-          </button>
-          <button mat-icon-button [ngClass]="{'icom_menu_container-active':menuActive}" *ngIf="element == true" (click)="hideData()">
-
-            <mat-icon class="icom_menu" >close</mat-icon>
-          </button>
-          <div class="menu__list-unactive" [ngClass]="{'menu__list-active':menuActive, 'menu__list-unactive': menuUnactive}">
-
-            <div class="list">
-              <li><a href="#skills"><h2>Skills</h2></a></li>
-              <li><a href="#hobbies"><h2>Hobbies</h2></a></li>
-              <li><a href="#formacion"><h2>Formations</h2></a></li>
-              <li><a href="#xp"><h2>Experience</h2></a></li>
-            </div>
+    <div>
+      <mat-card class="fixed-header" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky, 'menu_active': !menuActive}">
+        <button mat-button class="menu-icon" (click)="onSidenavClick()">
+          <div id="nav-icon3" [ngClass]="{'open': burgerActive}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        </mat-card-actions>
+        </button>
+        <div  class="menu__list-active" *ngIf="!menuUnactive">
+          <div class="list" *ngIf="!menuUnactive">
+            <li><a href="#skills"><h2>Skills</h2></a></li>
+            <li><a href="#hobbies"><h2>Hobbies</h2></a></li>
+            <li><a href="#formacion"><h2>Formations</h2></a></li>
+            <li><a href="#xp"><h2>Experience</h2></a></li>
+          </div>
+        </div>
       </mat-card>
     </div>
   </header>

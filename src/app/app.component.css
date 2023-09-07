@@ -78,16 +78,6 @@ section.menu{
     
 }
 
-.header{
-    padding: 1em 0 50px;
-    width: 60%;
-    margin: 0 20% 0 20%;
-}
-
-.u-wrapper{
-    width: 100%;
-}
-
 .fixed-header {
     position: absolute;
     z-index: 0;
@@ -106,8 +96,8 @@ section.menu{
     color: var(--white);
     background: var(--Mint);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .card_action_content{
@@ -135,22 +125,6 @@ section.menu{
     justify-content: flex-start;
 }
 
-.icom_menu_container-active{
-    height: 16%;
-    width: 20%;
-    display: flex;
-    align-self: flex-start;
-    justify-content: flex-start;
-}
-
-.icom_menu{
-    padding: 5%;
-}
-.icom_menu:active {
-    padding: 5%;
-    color: transparent;
-}
-
 .sticky {
     position: fixed;
 }
@@ -172,36 +146,26 @@ section.menu{
                 2s border-bottom-right-radius ease-in-out,
                 2s margin ease-in-out;
 }
-.cdk-overlay-container{
-    top: 0px !important;
+
+.menu-icon {
+    width: 18%;
+    display: flex;
+    margin: 18px 0 0 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
-.mat-mdc-menu-content {
-    background: transparent;
+.mat-mdc-button {
+    height: 21px;
 }
 
+.mdc-button {
+    padding: 0;
+}
 
-.cdk-overlay-connected-position-bounding-box{
-    margin-top: -100px;
-    top: 0px;
-    position: absolute;
-    left: 0px;
-    height: 100%;
-    top: 66.4844px !important;
-    left: 63.2969px !important;
-    width: 10%;
-    background: var(--Mint);
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 100%;
-    transition: 1s height ease-in-out,
-                1s width ease-in-out,
-                1.5s border-top-left-radius ease-in-out,
-                2s border-top-right-radius ease-in-out,
-                2s border-bottom-left-radius ease-in-out,
-                2s border-bottom-right-radius ease-in-out,
-                2s margin ease-in-out;
+.mdc-button {
+    min-width: 30px;
 }
 
 div.card-menu{
@@ -214,19 +178,6 @@ div.card-menu{
     border-bottom-right-radius: 100%;
 }
 
-.card-menu_sticky{
-    width: 20%;
-    height: 20%;
-    position: fixed;
-}
-
-.img-header{
-    margin: 0 0 0 2%;
-}
-.btn-header{
-    margin: 0 2% 0 0;
-}
-
 .menu__list-unactive{
     display: none;
     height: 0;
@@ -234,24 +185,101 @@ div.card-menu{
 }
 
 .menu__list-active{
+    margin-left: 20%;
     display: block;
-    
     width: 40%;
     height: 90%;
     animation: fade-in 8s;
+    transition: 10s height ease-in-out,
+                10s width ease-in-out,
+                10s margin ease-in-out;
 }
 
 .list{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    animation: fade-in 2s;
+    animation: fade-in .5s;
 }
 
-.menu_button{
-    color: var(--black);
+#nav-icon3 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 2px 0 0 5px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+  
+#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    bottom: 10px;
+    width: 20px;
+    background: var(--white);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
+/* burger animation */
+
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+    bottom: 10px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+    top: 6px;
+    bottom: 10px;
+}
+
+#nav-icon3 span:nth-child(4) {
+    top: 12px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+    top: 6px;
+    width: 0%;
+    left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+    top: 6px;
+    width: 0%;
+    left: 50%;
+}
+  
 /*Sección Title*/
 .about_me__content{
     height: 25%;
