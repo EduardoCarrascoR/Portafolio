@@ -65,13 +65,19 @@ https://en.bem.info/methodology/quick-start/*/
     width: 100%;
     height: 2500px;
     display: flex;
+    background: linear-gradient(120deg, var(--LightMint) 20%, var(--midlelightGreenAndMint) 30%, var(--LightGreen) 50%, var(--midlelightGreenAndMint) 70%, var(--LightMint) 80%) ;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: static;
 }
-
-.all_page_content{
-    width: 60%;
+div.all_page_content{
     margin: 0 20% 0 20%;
+    height: 90%;
+}
+div.page_content{
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
 }
 /*Sección Menu*/
 section.menu{
@@ -80,7 +86,7 @@ section.menu{
 
 .fixed-header {
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     top: 0;
     height: 54px;
     width: 54px;
@@ -174,7 +180,7 @@ div.card-menu{
     width: 13%;
     height: 21%;
     position: fixed;
-    background: var(--Mint);
+    background: var(--DarkGreen);
     border-bottom-right-radius: 100%;
 }
 
@@ -279,133 +285,9 @@ div.card-menu{
     width: 0%;
     left: 50%;
 }
-  
-/*Sección Title*/
-.about_me__content{
-    height: 25%;
-    background: var(--DarkGreen);
-}
-
-div.title{
-    width: 100%;
-    height: 100%;
-    color: var(--black);
-    background: var(--LightMint);
-    display: flex;
-    flex-direction: column;
-
-}
 
 
-section.title__content-border{
-    height: 70%;
-    background: var(--DarkGreen);
-}
-.title__content{
-    width: 100%;
-    height: 87%;
-    padding: 2.5% 0 0;
-    background: var(--LightMint);
-    border-top-right-radius: 35% 40%;
-    border-bottom-left-radius: 35% 40%;
-}
-.title__div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 100%;
-    align-items: center;
-}
 
-.profile__container{
-    height: 100%;
-    display: flex;
-    width: 30%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* TODO: ajustar lo del perfil y texto */
-img.img-profile{
-    content: url("../assets/img/profile.jpg");
-    max-height: 64%;
-    max-width: 64%;
-    border: var(--black) solid;
-    border-radius: 50%;
-    margin: 10px 0 10px 0;
-}
-
-.social__container{
-    width: 50%;
-    height: 6%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-a.a_content{
-    width: 15%
-}
-
-.social-item{
-    width: 100%;
-    transition: 1s;
-    filter: invert();
-}
-
-div.social-item:hover{
-    transform: scale(1.1);
-    transition: 0.2s;
-}
-
-.social_icon{
-    width: 100%;
-    filter: invert();
-}
-
-.instagram-icon:hover{
-    width: 100%;
-    filter: invert(83%) sepia(80%) saturate(2184%) hue-rotate(245deg) brightness(300%) contrast(50%);
-}
-.linkedin-icon:hover{
-    width: 100%;
-    filter: invert(27%) sepia(89%) saturate(2516%) hue-rotate(135deg) brightness(50%) contrast(87%);
-}
-.whatsapp-icon:hover{
-    width: 100%;
-    filter: invert(62%) sepia(20%) saturate(790%) hue-rotate(79deg) brightness(96%) contrast(85%);
-}
-.CV-icon:hover{
-    width: 100%;
-    filter: invert(48%) sepia(95%) saturate(3306%) hue-rotate(355deg) brightness(99%) contrast(90%);
-}
-
-.title__container{
-    width: 70%;
-    height: 30%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column; 
-}
-
-.title__bio{
-    font-size: 40px;
-}
-
-.title__subsection{
-}
-
-/*Sección About*/
-
-section.about{
-    height: 30%;
-    padding-top: 2.5%;
-    background: var(--DarkGreen);
-    color: var(--white);
-    border-top-right-radius: 35% 40%;
-}
 
 /*Sección Skills*/
 
@@ -485,7 +367,7 @@ section.academic{
 
 .academic__courses{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
@@ -558,7 +440,7 @@ section.formcontato{
 /*footeer*/
 
 section.footer{
-    height: 3%;
+    height: 10%;
     background:  var(--DarkGreen);
 }
 

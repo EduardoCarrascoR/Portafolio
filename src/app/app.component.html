@@ -14,10 +14,9 @@
         </button>
         <div  class="menu__list-active" *ngIf="!menuUnactive">
           <div class="list" *ngIf="!menuUnactive">
-            <li><a href="#skills"><h2>Skills</h2></a></li>
-            <li><a href="#hobbies"><h2>Hobbies</h2></a></li>
-            <li><a href="#formacion"><h2>Formations</h2></a></li>
-            <li><a href="#xp"><h2>Experience</h2></a></li>
+            <li><a routerLink="/about" id="about" (click)="clickInSideNav($event)"><h2>About</h2></a></li>
+            <li><a routerLink="/skills" id="skills" (click)="clickInSideNav($event)"><h2>Skills</h2></a></li>
+            <li><a routerLink="/experiences" id="experiences" (click)="clickInSideNav($event)"><h2>Experience</h2></a></li>
           </div>
         </div>
       </mat-card>
@@ -25,163 +24,45 @@
   </header>
 </section>
 
+<!-- <div class="background-circule"></div>
+ -->
 
 <div class="all_page">
-  
-  <!-- Sección del Title/Hero -->
-  <div class="about_me__content">
-    <div class="title ">
-      <section class="title__content-border">
-        <div class="title__content">
-          <div class="title__div all_page_content">
-            <div class="profile__container">
-              <img class="img-profile" src="assets/img/profile.jpg">
-              <div class="social__container">
-                <a href="https://www.instagram.com/edward_thorleif/" target="_blank" class="a_content">
-                  <div class="social-item instagram-icon"> 
-                    <img class="social_icon" src="assets/icon/instagram.png" alt="Instagram">
-                  </div>
-                </a>
-                <a href="https://www.linkedin.com/in/eduardo-ignacio-carrasco-romero/" target="_blank" class="a_content">
-                  <div class="social-item linkedin-icon">
-                    <img src="assets/icon/linkedin.png" alt="Linkedin" class="social_icon">
-                  </div>
-                </a>
-                <a href="https://api.whatsapp.com/send/?phone=56977636569" target="_blank" class="a_content">
-                  <div class="social-item whatsapp-icon">
-                    <img class="social_icon" src="assets/icon/whatsapp.png" alt="Whatsapp">
-                  </div>
-                </a>
-                <a href="https://drive.google.com/file/d/1Hr7HvTzfaLYkdqU5CaOhhBeqzcI_lQiI/view?usp=share_link" target="_blank" class="a_content">
-                  <div class="social-item CV-icon">
-                    <img class="social_icon" src="assets/icon/cv2.png" alt="CV">
-                  </div>
-                </a>    
-              </div>
-            </div>
-            <div class="title__container">
-              <div>
-                <h1 class="title__bio">Hola, mi nombre es Eduardo Carrasco Romero. </h1>
-              </div>  
-              <div>
-                <h3 class="title__subsection">Trabajo de desarrollador Fullstack mas centrado en el Backend de manera freelance desde 2011 aproximadamente. Formado en la Universidad San Sebastian y Oracle ONE en Alura Latam.</h3>
-              </div>
+  <div class="page_content">
+    <div class="all_page_content">
+
+      <!-- Sección del Title/Hero -->
+    <app-about *ngIf="about">
+      
+      <!--     Sección de Formación académica -->
+      <!-- <section class="academic" id="formacion">
+        <div class="all_page_content">
+          <h2 class="academic__title" >Formación académica</h2>
+          <div class="academic__courses">
+            <div class="academic__courses__box" *ngFor="let academic of academics">
+              <img src="{{academic.img}}">
+              <h4>{{academic.title}}</h4>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Sección sobre mi -->
-      <section class="about" id="sobre-mi">
-        <div class="about__container all_page_content">
-          <h3 class="about__title">Sobre mi</h3>
-          <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.  </p>
-          <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
-        </div>
-      </section>
-    </div>
+      </section> -->
+      <!-- Sección de Hobbies -->
+      <app-hobbies *ngIf="about"></app-hobbies>
+      
+    </app-about>
+      <!--  Sección de Skills -->
+    <app-skills *ngIf="skills"></app-skills>
+     
+ 
+ 
+     
+ 
+ 
+     <!-- Sección de Experiencia Profesional/Proyectos -->
+     <app-works *ngIf="experiences"></app-works>
   </div>
   
- <!--  Sección de Skills -->
-  <section class="skills" id="skills">
-    <div class="all_page_content carrousel__container">
-      <h3 class="carrousel__title">Skills</h3>
-      <owl-carousel-o class="carrousel__content" [options]="customOptions">
-        <ng-template carouselSlide *ngFor="let skill of skills">
-          <div class="icon__container">
-            <img class="icon" src="{{skill.src}}" alt="{{skill.name}}">
-            <li class="icon-text">{{skill.name}}</li>
-          </div>
-        </ng-template>  
-      </owl-carousel-o>
-    </div>
-  </section>
-
-  <!-- Sección de Hobbies -->
-  <section class="hobbies" id="hobbies">
-    <div class="all_page_content carrousel__container">
-      <h3 class="carrousel__title">Hobbies</h3>
-      <owl-carousel-o class="carrousel__content" [options]="customOptions">
-        <ng-template carouselSlide *ngFor="let hobbie of hobbies">
-          <div class="icon__container" >
-            <!-- <img class="icon" src="{{hobbie.src}}" alt="{{hobbie.name}}"> -->
-            <mat-icon class="icon" aria-hidden="false" fontIcon="{{hobbie.src}}"></mat-icon>
-            <li class="icon-text">{{hobbie.name}}</li>
-          </div>
-        </ng-template>  
-      </owl-carousel-o>
-    </div>
-  </section>
-
-  <!--     Sección de Formación académica -->
-  <section class="academic" id="formacion">
-    <div class="all_page_content">
-      <h2 class="academic__title" >Formación académica</h2>
-      <div class="academic__courses">
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            <!-- Pon el logotipo de la institución de formación -->
-            <li class="academic__courses__item__img"><img src="assets/img/ufpr_logo.png"></li>
-            <li class="academic__courses__item__title"><h4>Análisis de datos</h4></li>
-            <li class="academic__courses__item__subtitle"><p>2018 - UFPR</p></li>
-          </ul>
-        </div>
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            <!-- Pon el logotipo de la institución de formación -->
-            <li class="academic__courses__item__img"><img src="assets/img/alura_logo.png"></li>
-            <li class="academic__courses__item__title"><h4>Formación en UX Design</h4></li>
-            <li class="academic__courses__item__subtitle"><p>2019 - Alura</p></li>
-          </ul>
-        </div>
-        <div class="academic__courses__box">
-          <ul class="academic__courses__list">
-            <!-- Pon el logotipo de la institución de formación -->
-            <li class="academic__courses__item__img"><img src="assets/img/ufrj_logo.png"></li>
-            <li class="academic__courses__item__title"><h4>Posgrado en diseño</h4></li>
-            <li class="academic__courses__item__subtitle"><p>En curso - UFRJ</p></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección de Experiencia Profesional/Proyectos -->
-  <section class="experience" id="xp">
-    <div class="all_page_content">
-      <h2 class="experience__section__title">Experiencia</h2>
-      <div class="experience__content" >
-        <div class="experience__box"*ngFor="let proyect of proyects">
-          <div class="img__container">
-            <img class="experience__img img__rotate" src={{proyect.img}} (click)="openProyectModal(proyect)">
-          </div>
-          <div class="experience__info-container">
-            <h2 class="experience__title">{{proyect.name}}</h2>
-          </div>
-        </div>  
-      </div>
-    </div>
-      
-  </section>
-
-  <!--   Sección de Contacto -->
-  <section class="formcontato " id="contacto">
-    <div class="all_page_content contacto_container">
-      <div  class="formcontato__contacto">
-        <div class="formcontato__text">
-          <h2 class="formcontato__title">Contacto</h2>
-          <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
-          <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible. </h3>
-        </div>
-        <form class="formcontato__form" name="form">
-          <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
-          <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
-          <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto">
-          <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
-          <button type="submit" class="formcontato__botao">Enviar mensaje</button>
-        </form>
-      </div>
-    </div>
-  </section>
+ 
 
     <!-- Sección de Footer -->
   <section class="footer ">
@@ -193,15 +74,5 @@
       </div>
     </div>
   </section>
-
-  <!-- <div class="wrapper">
-    <owl-carousel-o [options]="customOptions">
-      <ng-container *ngFor="let slide of slidesStore" class="content">
-        <ng-template class="slide" carouselSlide [id]="slide.id">
-          <img class="icons" [src]="slide.src" [alt]="slide.name" [title]="slide.name" />
-        </ng-template>
-      </ng-container>
-    </owl-carousel-o>
-  </div> -->  
 </div>
 

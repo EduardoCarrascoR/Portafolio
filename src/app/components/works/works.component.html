@@ -1,0 +1,17 @@
+<div class="all_page_content">
+    <div class="text_container">
+        <h1 class="experience__section__title">HOLA, SOY EDUARDO</h1>
+        <h1 class="experience__section__title">UN DESARROLLADOR</h1>
+        <h2 class="experience__section__title">Me apasiona crear experiencias que sean atractivas, accesibles y centradas en el usuario.</h2>
+    </div>
+    <div class="experience__content" >
+        <div class="experience__box"*ngFor="let proyect of proyects">
+            <div class="img__container">
+            <img class="experience__img img__rotate" src={{proyect.img}} (click)="openProyectModal(proyect)">
+            </div>
+            <div class="experience__info-container">
+                <h2 class="experience__section__title">{{proyect.name}}</h2>
+            </div>
+        </div>  
+    </div>
+</div>

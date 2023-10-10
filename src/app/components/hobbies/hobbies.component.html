@@ -1,0 +1,14 @@
+<section class="hobbies" id="hobbies">
+    <div class="all_page_content carrousel__container">
+      <h3 class="carrousel__title">Hobbies</h3>
+      <owl-carousel-o class="carrousel__content" [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let hobbie of hobbies">
+          <div class="icon__container" >
+            <!-- <img class="icon" src="{{hobbie.src}}" alt="{{hobbie.name}}"> -->
+            <mat-icon class="icon" aria-hidden="false" fontIcon="{{hobbie.src}}"></mat-icon>
+            <li class="icon-text">{{hobbie.name}}</li>
+          </div>
+        </ng-template>  
+      </owl-carousel-o>
+    </div>
+  </section>

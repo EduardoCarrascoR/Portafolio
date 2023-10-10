@@ -1,6 +1,6 @@
 
 :root {
-    --font: 'Oxygen', sans-serif;
+    --font: 'Black Ops One', cursive;
     --primary: #42E2B8;
     --gradient: linear-gradient(0deg, rgba(67,165,108,1) 0%, rgba(58,138,93,1) 5%, rgba(54,124,86,1) 12%, rgba(50,112,80,1) 21%, rgba(47,106,76,1) 49%, rgba(44,97,70,1) 70%, rgba(37,82,59,1) 85%);
     --black: black;
@@ -12,22 +12,26 @@
     --Teal: rgb(67, 154, 151);
     --Mint: rgb(137, 199, 185);
     --LightMint: rgb(151, 222, 206);
+    --midlelightGreenAndMint: rgb(174, 229, 209);
     --LightGreen: rgb(203, 237, 213);
     --DarkGreen: rgba(44,97,70,1);
     --white: white;
 
 }
 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
     box-sizing: border-box;
-    background: var(--white) ;
-    font-family: var(--font);
+    color: var(--DarkGreen);
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.experience__section__title {
+    font-family: 'Black Ops One', cursive !important;
+}
 
 .owl-carousel{
     height: 100%;

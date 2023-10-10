@@ -1,0 +1,15 @@
+.skills {
+    display: flex;
+    justify-content: center;
+}
+
+.title__container {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+h3 {
+    font-size: 80px;
+}
