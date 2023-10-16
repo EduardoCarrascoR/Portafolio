@@ -29,50 +29,73 @@
 
 <div class="all_page">
   <div class="page_content">
-    <div class="all_page_content">
+    <div class="all_page_content page__container">
 
       <!-- Sección del Title/Hero -->
-    <app-about *ngIf="about">
-      
-      <!--     Sección de Formación académica -->
-      <!-- <section class="academic" id="formacion">
-        <div class="all_page_content">
-          <h2 class="academic__title" >Formación académica</h2>
-          <div class="academic__courses">
-            <div class="academic__courses__box" *ngFor="let academic of academics">
-              <img src="{{academic.img}}">
-              <h4>{{academic.title}}</h4>
+      <app-about *ngIf="about">
+        
+        <!--     Sección de Formación académica -->
+        <!-- <section class="academic" id="formacion">
+          <div class="all_page_content">
+            <h2 class="academic__title" >Formación académica</h2>
+            <div class="academic__courses">
+              <div class="academic__courses__box" *ngFor="let academic of academics">
+                <img src="{{academic.img}}">
+                <h4>{{academic.title}}</h4>
+              </div>
             </div>
           </div>
-        </div>
-      </section> -->
-      <!-- Sección de Hobbies -->
-      <app-hobbies *ngIf="about"></app-hobbies>
-      
-    </app-about>
+        </section> -->
+        <!-- Sección de Hobbies -->
+        <app-hobbies *ngIf="about"></app-hobbies>
+        
+      </app-about>
       <!--  Sección de Skills -->
-    <app-skills *ngIf="skills"></app-skills>
-     
- 
- 
-     
- 
- 
-     <!-- Sección de Experiencia Profesional/Proyectos -->
-     <app-works *ngIf="experiences"></app-works>
-  </div>
+      <app-skills *ngIf="skills"></app-skills>
+      
+  
+  
+      
+  
+  
+      <!-- Sección de Experiencia Profesional/Proyectos -->
+      <app-works *ngIf="experiences"></app-works>
+    </div>
   
  
 
     <!-- Sección de Footer -->
-  <section class="footer ">
-    <div class="all_page_content">
+    <section class="footer ">
+      <div class="all_page_content footer__container">
 
-      <div class="footer__rodape">
-        <p>Desarrollado por Eduardo Carrasco Romero</p>
-        <p>2023</p>
+        <div class="footer__rodape">
+          <p>Desarrollado por Eduardo Carrasco Romero</p>
+          <p>2023</p>
+        </div>
+        <div class="social__container">
+          <a href="https://www.instagram.com/edward_thorleif/" target="_blank" class="a_content">
+            <div class="social-item instagram-icon"> 
+              <img class="social_icon" src="assets/icon/instagram.png" alt="Instagram">
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/eduardo-ignacio-carrasco-romero/" target="_blank" class="a_content">
+            <div class="social-item linkedin-icon">
+              <img src="assets/icon/linkedin.png" alt="Linkedin" class="social_icon">
+            </div>
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=56977636569" target="_blank" class="a_content">
+            <div class="social-item whatsapp-icon">
+              <img class="social_icon" src="assets/icon/whatsapp.png" alt="Whatsapp">
+            </div>
+          </a>
+          <a href="https://drive.google.com/file/d/1Hr7HvTzfaLYkdqU5CaOhhBeqzcI_lQiI/view?usp=share_link" target="_blank" class="a_content">
+            <div class="social-item CV-icon">
+              <img class="social_icon" src="assets/icon/cv2.png" alt="CV">
+            </div>
+          </a>    
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 

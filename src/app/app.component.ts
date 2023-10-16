@@ -88,6 +88,7 @@ export class AppComponent implements OnInit{
         break;
     }
     this.menuUnactive = !this.menuUnactive; 
+    this.burgerActive = !this.burgerActive;
     this.menuActive = !this.menuActive;
   }
 

@@ -72,12 +72,13 @@ https://en.bem.info/methodology/quick-start/*/
 }
 div.all_page_content{
     margin: 0 20% 0 20%;
-    height: 90%;
 }
 div.page_content{
     width: 100%;
     height: 100%;
-    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /*Sección Menu*/
 section.menu{
@@ -285,8 +286,12 @@ div.card-menu{
     width: 0%;
     left: 50%;
 }
+ /* page content*/
 
-
+ .page__container {
+    padding: 10% 0 0 0;
+    height: 85%;
+ }
 
 
 /*Sección Skills*/
@@ -440,12 +445,66 @@ section.formcontato{
 /*footeer*/
 
 section.footer{
-    height: 10%;
-    background:  var(--DarkGreen);
+    height: 5%;
+    background:  transparent;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .footer__rodape p{
-    color: var(--white);
+    color: var(--DarkGreen);
+}
+
+
+.social__container{
+    width: 16%;
+    height: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a.a_content{
+    width: 15%
+}
+
+.social-item{
+    width: 100%;
+    transition: 1s;
+    filter: invert(67%) sepia(20%) saturate(790%) hue-rotate(79deg) brightness(66%) contrast(85%);
+}
+
+div.social-item:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.social_icon{
+    width: 100%;
+    filter: invert();
+}
+
+.instagram-icon:hover{
+    width: 100%;
+    filter: invert(83%) sepia(80%) saturate(2184%) hue-rotate(245deg) brightness(300%) contrast(50%);
+}
+.linkedin-icon:hover{
+    width: 100%;
+    filter: invert(27%) sepia(89%) saturate(2516%) hue-rotate(135deg) brightness(50%) contrast(87%);
+}
+.whatsapp-icon:hover{
+    width: 100%;
+    filter: invert(62%) sepia(20%) saturate(790%) hue-rotate(79deg) brightness(96%) contrast(85%);
+}
+.CV-icon:hover{
+    width: 100%;
+    filter: invert(48%) sepia(95%) saturate(3306%) hue-rotate(355deg) brightness(99%) contrast(90%);
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?

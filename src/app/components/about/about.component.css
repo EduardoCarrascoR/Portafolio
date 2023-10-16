@@ -14,19 +14,6 @@ div.title{
 
 }
 
-
-section.title__content-border{
-    height: 70%;
-    background: var(--DarkGreen);
-}
-.title__content{
-    width: 100%;
-    height: 87%;
-    padding: 2.5% 0 0;
-    background: var(--LightMint);
-    border-top-right-radius: 35% 40%;
-    border-bottom-left-radius: 35% 40%;
-}
 .title__div{
     display: flex;
     flex-direction: row;
@@ -52,51 +39,6 @@ img.img-profile{
     border: var(--black) solid;
     border-radius: 50%;
     margin: 10px 0 10px 0;
-}
-
-.social__container{
-    width: 50%;
-    height: 6%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-a.a_content{
-    width: 15%
-}
-
-.social-item{
-    width: 100%;
-    transition: 1s;
-    filter: invert();
-}
-
-div.social-item:hover{
-    transform: scale(1.1);
-    transition: 0.2s;
-}
-
-.social_icon{
-    width: 100%;
-    filter: invert();
-}
-
-.instagram-icon:hover{
-    width: 100%;
-    filter: invert(83%) sepia(80%) saturate(2184%) hue-rotate(245deg) brightness(300%) contrast(50%);
-}
-.linkedin-icon:hover{
-    width: 100%;
-    filter: invert(27%) sepia(89%) saturate(2516%) hue-rotate(135deg) brightness(50%) contrast(87%);
-}
-.whatsapp-icon:hover{
-    width: 100%;
-    filter: invert(62%) sepia(20%) saturate(790%) hue-rotate(79deg) brightness(96%) contrast(85%);
-}
-.CV-icon:hover{
-    width: 100%;
-    filter: invert(48%) sepia(95%) saturate(3306%) hue-rotate(355deg) brightness(99%) contrast(90%);
 }
 
 .title__container{
