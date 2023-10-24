@@ -1,17 +1,11 @@
+section.about{
+   
+}
+
 /*Sección Title*/
 .about_me__content{
     height: 25%;
     background: var(--DarkGreen);
-}
-
-div.title{
-    width: 100%;
-    height: 100%;
-    color: var(--black);
-    background: var(--LightMint);
-    display: flex;
-    flex-direction: column;
-
 }
 
 .title__div{
@@ -33,21 +27,16 @@ div.title{
 
 /* TODO: ajustar lo del perfil y texto */
 img.img-profile{
-    content: image-set("../assets/img/profile.jpg");
+    content: image-set("../assets/img/profile-filter.jpg");
     max-height: 64%;
     max-width: 64%;
-    border: var(--black) solid;
+    /* border: rgba(137,138,166,1);
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%; */
     border-radius: 50%;
     margin: 10px 0 10px 0;
-}
-
-.title__container{
-    width: 70%;
-    height: 30%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column; 
+    background: radial-gradient(circle, rgba(201,187,207,1) 11%, rgba(137,138,166,1) 38%);
 }
 
 .title__bio{
@@ -55,14 +44,4 @@ img.img-profile{
 }
 
 .title__subsection{
-}
-
-/*Sección About*/
-
-section.about{
-    height: 30%;
-    padding-top: 2.5%;
-    background: var(--DarkGreen);
-    color: var(--white);
-    border-top-right-radius: 35% 40%;
 }

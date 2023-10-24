@@ -296,12 +296,6 @@ div.card-menu{
 
 /*Sección Skills*/
 
-section.skills{
-    height: 7%;
-    padding-top: 2.5%;
-}
-
-
 /*Sección Hobbies*/
 section.hobbies{
     height: 7%;
@@ -376,51 +370,6 @@ section.academic{
     justify-content: space-evenly;
 }
 
-/* experiencia*/
-
-section.experience{
-    height: 29%;
-    padding-top: 2.5%;
-    width: 100%;
-}
-.experience__box{
-    width: 30%;
-    height: 40%;
-    padding: 1.5% 1.5% 1.5% 1.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.img__container{
-    display: flex;
-    justify-content: center;
-    height: 60%;
-    width: 90%;    
-    
-}
-
-.experience__img{
-    cursor: pointer;
-    width: 40%;
-    height: 100%;
-    transition: 2s ;
-}
-
-img.img__rotate:hover{
-    display: block;
-    transform: scale(1.2);
-    transition: all 0.3s linear;
-}
-
-.experience__info-container{
-    height: 40%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}   
-
 /*Contacto*/
 
 section.formcontato{
@@ -430,16 +379,6 @@ section.formcontato{
 
 .contacto_container{
 
-}
-
-.experience__content{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.experience__img{
-    width: 55%;
 }
 
 /*footeer*/

@@ -31,8 +31,22 @@ body {
     max-width: 100%;
 }
 
-.experience__section__title {
+h1 {
+    font-size: 130px !important;
+    height: 100px !important;
+}
+
+.section__title {
     font-family: 'Black Ops One', cursive !important;
+}
+
+.title__container {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
 }
 
 .owl-carousel{

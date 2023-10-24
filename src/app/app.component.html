@@ -14,9 +14,9 @@
         </button>
         <div  class="menu__list-active" *ngIf="!menuUnactive">
           <div class="list" *ngIf="!menuUnactive">
+            <li><a routerLink="/" id="experiences" (click)="clickInSideNav($event)"><h2>Works</h2></a></li>
             <li><a routerLink="/about" id="about" (click)="clickInSideNav($event)"><h2>About</h2></a></li>
             <li><a routerLink="/skills" id="skills" (click)="clickInSideNav($event)"><h2>Skills</h2></a></li>
-            <li><a routerLink="/experiences" id="experiences" (click)="clickInSideNav($event)"><h2>Experience</h2></a></li>
           </div>
         </div>
       </mat-card>

@@ -1,33 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
-section.experience{
-    height: 29%;
-    padding-top: 2.5%;
-    width: 100%;
-}
-.text_container {
-    text-align: center;
+section.work{
 }
 
-.experience__content {
+.works__content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-
-
-h1 {
-    font-size: 150px;
-    height: 100px;
-    padding-bottom: 10px;
-}
 h2 {
     font-size: 20px;
 }
 
-.experience__box{
+.work__box{
     width: 30%;
     height: 40%;
     padding: 1.5% 1.5% 1.5% 1.5%;
@@ -36,7 +23,7 @@ h2 {
     align-items: center;
 }
 
-.img__container{
+.work_img__container{
     display: flex;
     justify-content: center;
     height: 60%;
@@ -44,7 +31,7 @@ h2 {
     
 }
 
-.experience__img{
+.work__img{
     cursor: pointer;
     width: 40%;
     height: 100%;
@@ -57,7 +44,7 @@ img.img__rotate:hover{
     transition: all 0.3s linear;
 }
 
-.experience__info-container{
+.work__info-container{
     height: 40%;
     width: 100%;
     display: flex;
