@@ -1,6 +1,66 @@
 section.skills {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 h3 {
     font-size: 80px;
+}
+
+.skill_container {
+    height: 10%;
+    background-color: var(--DarkGreen);
+    border-radius: 35px;
+    animation: move-the-bar 2s;
+}
+
+.Skill-graphic {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.NodeJs {
+    width: 50%;
+}
+
+.EnmaScript {
+    width: 45%;
+    align-self: center;
+}
+
+.Html {
+    width: 30%;
+    align-self: center;
+}
+
+.Angular {
+    width: 30%;
+    align-self: flex-end;
+}
+
+@keyframes move-the-bar {
+    0% {
+        transform: translate(-100px, 0);
+        width: 0%;
+    }
+    50% {
+        transform: translate(20px, 0);
+        width: 70%;
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+  }
+
+.text_skill {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--midlelightGreenAndMint);
+    font-family: 'Black Ops One', cursive !important;
 }

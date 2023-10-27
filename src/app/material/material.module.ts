@@ -22,7 +22,7 @@ const MaterialComponents = [
   MatProgressSpinnerModule,
   MatCardModule,
   MatSlideToggleModule,
-  CarouselModule
+  CarouselModule,
 ];
 
 @NgModule({

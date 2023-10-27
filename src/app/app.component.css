@@ -63,7 +63,7 @@ https://en.bem.info/methodology/quick-start/*/
 
 .all_page{    
     width: 100%;
-    height: 2500px;
+    height: 100vh;
     display: flex;
     background: linear-gradient(120deg, var(--LightMint) 20%, var(--midlelightGreenAndMint) 30%, var(--LightGreen) 50%, var(--midlelightGreenAndMint) 70%, var(--LightMint) 80%) ;
     flex-direction: column;
@@ -292,7 +292,6 @@ div.card-menu{
     padding: 10% 0 0 0;
     height: 85%;
  }
-
 
 /*Sección Skills*/
 
