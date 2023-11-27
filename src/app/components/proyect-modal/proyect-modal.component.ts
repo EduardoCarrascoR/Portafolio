@@ -49,7 +49,6 @@ export class ProyectModalComponent {
     public dialogRef: MatDialogRef<ProyectModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Proyect,
   ) {
-    console.log(data)
     this.imagesdata(data)
   }
 
@@ -84,13 +83,10 @@ export class ProyectModalComponent {
 
   imagesdata(data: any) {
     const id = data.name;
-    
     for (let index = 1; index < 6; index++) {
-      console.log(id + index)
       let aux = this.images.find((image) => image.id == id + index)     
       if(aux === undefined) continue
       else {this.proyectImages.push(aux)} 
     }
-    console.log(this.proyectImages)
   }
 }
