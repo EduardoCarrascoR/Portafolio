@@ -11,26 +11,47 @@ import { Proyect } from 'src/app/interfaces/proyect';
 export class ProyectModalComponent {
   images = [
     {
-      'id': 0,
+      'id': '0',
       'name': 'deco',
       'src': 'assets/img/decod_print.png'
     },
     {
-      'id': 1,
+      'id': '1',
       'name': 'forca',
       'src': 'assets/img/forca_print.png'
     },
     {
-      'id': 2,
+      'id': '2',
       'name': 'forca2',
       'src': 'assets/img/forca2_print.png'
     },
+    {
+      'id': 'CatEncrypter1',
+      'name': 'forca2',
+      'src': 'assets/img/CatEncrypter1-1.png'
+    },
+    {
+      'id': 'CatEncrypter2',
+      'name': 'forca2',
+      'src': 'assets/img/CatEncrypter1-2.png'
+    },
+    {
+      'id': 'CatEncrypter3',
+      'name': 'forca2',
+      'src': 'assets/img/CatEncrypter1-3.png'
+    },
+
   ];
+
+  proyectImages: any[] = [];
 
   constructor(
     public dialogRef: MatDialogRef<ProyectModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Proyect,
-  ) {}
+  ) {
+    console.log(data)
+    this.imagesdata(data)
+  }
 
   ProyectOptions: OwlOptions = {
     loop: true,
@@ -59,5 +80,17 @@ export class ProyectModalComponent {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  imagesdata(data: any) {
+    const id = data.name;
+    
+    for (let index = 1; index < 6; index++) {
+      console.log(id + index)
+      let aux = this.images.find((image) => image.id == id + index)     
+      if(aux === undefined) continue
+      else {this.proyectImages.push(aux)} 
+    }
+    console.log(this.proyectImages)
   }
 }

@@ -11,7 +11,7 @@ import { ProyectModalComponent } from '../proyect-modal/proyect-modal.component'
 export class WorksComponent {
 
   proyects: Proyect[] = [
-    { name: "fibonachi",
+    { name: "CatEncrypter",
       img: "../assets/icon/WebApp.png",
       languages: "Javascript"},
     { name: "Encriptador de texto",

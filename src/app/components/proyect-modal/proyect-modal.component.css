@@ -25,3 +25,8 @@ h1 {
     align-items: end;
     height: 10%;
 }
+
+.icon__container img {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
