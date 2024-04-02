@@ -27,20 +27,40 @@ export class ProyectModalComponent {
     },
     {
       'id': 'CatEncrypter1',
-      'name': 'forca2',
+      'name': 'CatEncrypter1',
       'src': 'assets/img/CatEncrypter1-1.png'
     },
     {
       'id': 'CatEncrypter2',
-      'name': 'forca2',
+      'name': 'CatEncrypter2',
       'src': 'assets/img/CatEncrypter1-2.png'
     },
     {
       'id': 'CatEncrypter3',
-      'name': 'forca2',
+      'name': 'CatEncrypter3',
       'src': 'assets/img/CatEncrypter1-3.png'
     },
-
+    {
+      'id': 'AngeloBot1',
+      'name': 'AngeloBot1',
+      'src': 'assets/img/AngeloBot-1.png'
+    },
+    {
+      'id': 'AngeloBot2',
+      'name': 'AngeloBot2',
+      'src': 'assets/img/AngeloBot-2.png'
+    },
+    {
+      'id': 'AngeloBot3',
+      'name': 'AngeloBot3',
+      'src': 'assets/img/AngeloBot-3.png'
+    },
+    {
+      'id': 'AngeloBot4',
+      'name': 'AngeloBot4',
+      'src': 'assets/img/AngeloBot-4.png'
+    },
+    
   ];
 
   proyectImages: any[] = [];

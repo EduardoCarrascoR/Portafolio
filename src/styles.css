@@ -20,7 +20,7 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 400 21px/93px Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 400 21px/93px var(--font) }
 body {
     box-sizing: border-box;
     color: var(--DarkGreen);
@@ -36,10 +36,6 @@ h1 {
     margin-block-end: 0;
     margin: 0;
     line-height: 70% !important;
-}
-
-.section__title {
-    font-family:  'Black Ops One', cursive !important;
 }
 
 .title__container {
@@ -107,8 +103,9 @@ section .owl-prev span{
     transform: translate(-56%, -51%);
 }
 
-.mat-typography h3{
-    margin: 0 0 10px;
+.mat-typography h3, p, h1, h2, h4{
+    font-family: var(--font) !important;
+    margin: 0 !important;
 }
 
 .button_containers{

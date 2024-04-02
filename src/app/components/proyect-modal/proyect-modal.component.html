@@ -2,15 +2,16 @@
     <div class="text-content">
         <h1 mat-dialog-title>{{data.name}}</h1>
     
-        <div mat-dialog-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
-            <p>Lenguajes utilizados: {{data.languages}}</p>
+        <div mat-dialog-content class="description-container">
+            <p>{{data.description}}</p>
+            <div class="utils">
+              <p>Lenguajes utilizados: {{data.languages}}</p>
+              
+            </div>
         </div>
         
     </div>
-    <div class="carrusel">
+    <div class="carrousel">
         <owl-carousel-o class="carrousel__content" [options]="ProyectOptions">
           <ng-template carouselSlide *ngFor="let image of proyectImages">
             <div class="icon__container" >

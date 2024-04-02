@@ -8,23 +8,6 @@ import { Proyect } from './interfaces/proyect';
 })
 export class AppComponent implements OnInit{
   
- 
-  
-  proyects: Proyect[] = [
-    { name: "fibonachi",
-      img: "../assets/icon/WebApp.png",
-      languages: "Javascript"},
-    { name: "Encriptador de texto",
-      img: "../assets/icon/WebApp3.png",
-      languages: "HTML, CSS3 y JavaScript"},
-    { name: "Encriptador de texto",
-      img: "../assets/icon/WebApp4.png",
-      languages: "HTML, CSS3 y JavaScript"},
-    { name: "Desafio Alura",
-      img: "../assets/icon/WebApp2.png",
-      languages: "HTML y JavaScript"}
-  ];
-
   academics = [
     {
       title: 'Análisis de datos',

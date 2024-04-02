@@ -6,15 +6,39 @@
     width: 100%;
 }
 .text-content {
-    height: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    text-align: center;
+    font-size: 80px !important;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-container{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 24px 0 24px;
+}
+
+.utils {
+    display: flex;
+    flex-direction: row;
+}
+
+.carrousel {
+    height: 40%;
+
 }
 
 .carrousel-content {
-    height: 60%;
+    height: 50%;
     max-height: 100% !important;
     width: 90%;
 }
